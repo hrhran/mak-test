@@ -27,7 +27,10 @@ app.get('/', (req, res) => {
         })
     })
 })
- e
-app.listen(4000, function() {
-    console.log('server is running');
-})
+
+ const port = process.env.PORT || 8000;
+ 
+ 
+ server.listen(port, () => {
+     console.log("App is running on port " + port);
+ });
