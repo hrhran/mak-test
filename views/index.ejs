@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Joined</th>
+            <th scope="col">Email</th>
+            <th scope="col">Discord ID</th>
+            <th scope="col">Activation Code</th>
+            <th scope="col">Twitter</th>
+            <th scope="col">Subscription</th>
+          </tr>
+        </thead>
+        <tbody>
+        <%subList.forEach(sub => {%>
+            <tr>
+                <th scope="row"><%= sub._id %></th>
+                <td><%= sub.createdAt %></td>
+                <td><%= sub.email %></td>
+                <td><%= sub.discord_id %></td>
+                <td><%= sub.code %></td>
+                <td><%= (sub.twitter === '')? '-': sub.twitter %></td>
+                <td><%= sub.subscription %></td>
+            </tr>
+        <%})%>
+        </tbody>
+      </table>
+    </div>
+    
+</body>
+</html>
