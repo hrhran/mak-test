@@ -21,9 +21,9 @@
           </tr>
         </thead>
         <tbody>
-        <%subList.forEach(sub => {%>
+        <%subList.forEach((sub,i) => {%>
             <tr>
-                <th scope="row"><%= sub._id %></th>
+                <th scope="row"><%= i+1 %></th>
                 <td><%= sub.createdAt %></td>
                 <td><%= sub.email %></td>
                 <td><%= sub.discord_id %></td>
