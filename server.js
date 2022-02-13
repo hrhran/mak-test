@@ -6,7 +6,7 @@ const ejs = require('ejs');
 
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb+srv://admin:Admin%40123x@testbot.6lv2u.mongodb.net/launchpass?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://trademak:dWUCNpb68jxSKk0U@serverlessinstance1.ucout.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
 const myObject = mongoose.Schema({
     timestamp: String,

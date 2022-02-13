@@ -12,24 +12,28 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Joined</th>
+            <th scope="col">Timestamp</th>
             <th scope="col">Email</th>
             <th scope="col">Discord ID</th>
-            <th scope="col">Activation Code</th>
+            <th scope="col">Discord Name</th>
+            <th scope="col">Status</th>
             <th scope="col">Twitter</th>
-            <th scope="col">Subscription</th>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Channel</th>
           </tr>
         </thead>
         <tbody>
         <%subList.forEach((sub,i) => {%>
             <tr>
                 <th scope="row"><%= i+1 %></th>
-                <td><%= sub.createdAt %></td>
+                <td><%= sub.timestamp %></td>
                 <td><%= sub.email %></td>
-                <td><%= sub.discord_id %></td>
-                <td><%= sub.code %></td>
+                <td><%= (sub.discord_id === '')? '-': sub.discord_id %></td>
+                <td><%= (sub.discord_name === '')? '-': sub.discord_name %></td>
+                <td><%= sub.status %></td>
                 <td><%= (sub.twitter === '')? '-': sub.twitter %></td>
-                <td><%= sub.subscription %></td>
+                <td><%= (sub.cust_id === '')? '-': sub.cust_id %></td>
+                <td><%= sub.channel %></td>
             </tr>
         <%})%>
         </tbody>
