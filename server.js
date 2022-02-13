@@ -10,12 +10,13 @@ mongoose.connect('mongodb+srv://trademak:dWUCNpb68jxSKk0U@serverlessinstance1.uc
 
 const myObject = mongoose.Schema({
     timestamp: String,
-    createdAt: String,
     email: String,
     discord_id: String,
-    code: String,
+    discord_name: String,
+    status: String,
     twitter: String,
-    subscription: String,
+    cust_id: String,
+    channel: String,
   });
 
   const users = mongoose.model("subscriber", myObject);
